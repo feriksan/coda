@@ -15,7 +15,6 @@ public class CadImage {
   private long cadImageId;
   @ManyToOne
   @JoinColumn(name = "cad")
-  @JsonIgnore
   private Cad cad;
   @ManyToOne
   @JoinColumn(name = "drawer")
@@ -23,7 +22,6 @@ public class CadImage {
   @ManyToOne
   @JoinColumn(name = "po_product")
   private ProductPo po_product;
-  @Column(name = "image")
   private String image;
   private String imageView;
 }

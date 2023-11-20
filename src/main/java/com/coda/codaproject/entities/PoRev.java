@@ -17,7 +17,6 @@ public class PoRev {
   private long revId;
   @ManyToOne
   @JoinColumn(name = "po_product")
-  @JsonIgnore
   private ProductPo po_product;
   @Column(name = "note")
   private String note;

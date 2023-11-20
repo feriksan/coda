@@ -43,5 +43,6 @@ public class Cad {
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
+  @JsonIgnore
   private List<CadImage> imageCad;
 }

@@ -15,7 +15,6 @@ public class ProductImage {
   private long productImageId;
   @ManyToOne
   @JoinColumn(name = "po_product")
-  @JsonIgnore
   private ProductPo po_product;
   @Column(name = "image")
   private String image;

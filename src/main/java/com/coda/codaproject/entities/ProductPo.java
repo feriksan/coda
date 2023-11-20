@@ -1,5 +1,6 @@
 package com.coda.codaproject.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -73,6 +74,7 @@ public class ProductPo {
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
+  @JsonIgnore
   private List<ProductImage> imageProducts;
 
   @OneToMany(
@@ -81,5 +83,6 @@ public class ProductPo {
           cascade = CascadeType.ALL,
           orphanRemoval = true
   )
+  @JsonIgnore
   private List<PoRev> revPoProduct;
 }
