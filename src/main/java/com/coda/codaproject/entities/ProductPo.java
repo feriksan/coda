@@ -69,6 +69,15 @@ public class ProductPo {
   private java.sql.Timestamp createdAt;
 
   @OneToMany(
+          mappedBy = "product_po",
+          fetch = FetchType.LAZY,
+          cascade = CascadeType.ALL,
+          orphanRemoval = true
+  )
+  @JsonIgnore
+  private List<Progress> progressList;
+
+  @OneToMany(
           mappedBy = "po_product",
           fetch = FetchType.LAZY,
           cascade = CascadeType.ALL,
